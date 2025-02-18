@@ -1,6 +1,6 @@
 NAME	=	Scalar
 
-CFLAGS	=	-Wall -Wextra -Werror -std=c++2b
+CFLAGS	=	-Wall -Wextra -Werror
 
 FILES	=	main.cpp Serializer.cpp
 CC		=	c++

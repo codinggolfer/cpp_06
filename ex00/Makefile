@@ -1,6 +1,6 @@
 NAME	=	Scalar
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -std=c++2b
 
 FILES	=	main.cpp ScalarConverter.cpp
 CC		=	c++

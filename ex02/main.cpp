@@ -48,13 +48,10 @@ Base* generate() {
     {
     case 0:
         return new ClassA();
-        break;
     case 1:
         return new ClassB();
-        break;
     case 2:
         return new ClassC();
-        break;
     default:
         break;
     }
@@ -63,8 +60,10 @@ Base* generate() {
 
 int main() {
     Base *p = generate();
+	Base *c = nullptr;
     identify(p);
     identify(*p);
-    identify(new ClassA());
+    identify(*c);
+	delete p;
     return 0;
 }
