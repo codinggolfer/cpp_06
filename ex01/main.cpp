@@ -12,6 +12,6 @@ int main() {
     std::cout << "s1: " << ptr->s1 << std::endl;
     std::cout << "n: " << ptr->n << std::endl;
     std::cout << "s2: " << ptr->s2 << std::endl;
-
+    
     return 0;
 }

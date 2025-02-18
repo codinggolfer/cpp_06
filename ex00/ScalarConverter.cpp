@@ -1,4 +1,5 @@
 #include "ScalarConverter.hpp"
+#include <string>
 
 ScalarConverter::ScalarConverter() {}
 
@@ -88,11 +89,17 @@ void convertFloatOrDouble(const std::string literal) {
 }
 
 void ScalarConverter::converter(std::string literal) {
+    std::string valid = "0123456789.f-+";
     if (literal.size() == 3 && literal[0] == '\'' && literal[2] == '\'') {
         convertChar(literal[1]);
     }
     else if (literal.find('.') != std::string::npos || literal == "-inff" || literal == "+inff" || literal == "nanf" || literal == "-inf" || literal == "+inf" || literal == "nan") {
-        convertFloatOrDouble(literal);
+            for (size_t i = 0; i < literal.length(); i++) {
+                if (valid.contains(literal[i]) || i == literal.find_last_of('.')) {
+                    break ;
+                }
+            }
+            convertFloatOrDouble(literal);
     }
     else {
         convertInt(literal);
