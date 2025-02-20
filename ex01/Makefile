@@ -1,4 +1,4 @@
-NAME	=	Scalar
+NAME	=	Serializer
 
 CFLAGS	=	-Wall -Wextra -Werror
 
